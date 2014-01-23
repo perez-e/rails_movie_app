@@ -1,0 +1,32 @@
+<%= render  partial: "navbar" %>
+<h1 class="heading"><%= @movie["Title"] %> (<%= @movie["Year"] %>)</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-5 col-xs12">
+			<div class="center" ><a href='http://www.imdb.com/title/<%= @movie["imdbID"] %>'>
+					<img src="<%= @movie['Poster']=='N/A' ? 'http://static2.wikia.nocookie.net/__cb20090329133961/superfriends/images/a/a5/No_Photo_Available.jpg' : @movie['Poster'] %>"/>
+				</a>
+			</div>
+		</div>
+		<div class="col-sm-7 col-xs-12 movie-contents">
+			<h3 class="director movie-info">Director</h3>
+			<p class="director"><%= @movie["Director"] %></p>
+			<h3 class="movie-info actors">Actors</h3>
+			<ul class="actors">
+				<% @movie["Actors"].split(", ").each do |actor| %>
+					<li class="actors"><%= actor %></li>
+				<% end %>
+			</ul>
+			<h3 class="movie-info plot">Plot</h3>
+			<p class="plot"><%= @movie["Plot"] %></p>
+			<h3 class="movie-info runtime">Runtime</h3>
+			<p class="runtime"><%= @movie["Runtime"] %></p>
+			<h3 class="movie-info rating">Rating</h3>
+			<p class="rating"><%= @movie["Rated"] %></p>
+			<h3 class="movie-info genre">Genre</h3>
+			<p class="genre"><%= @movie["Genre"] %></p>
+		</div>
+	</div>
+</div>
+<br />
+<a href="/" class="btn btn-primary new-search-button">New Search</a>

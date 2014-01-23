@@ -1,0 +1,119 @@
+// Place all the styles related to the movies controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.poster_div {
+	display: block;
+	position: absolute;
+	right: 25px;
+	width: 45px;
+	background-color: black;
+}
+
+.poster {
+	height: 100px;
+	border: solid 1px #fefefd;
+}
+
+
+.heading {
+	display: block;
+	margin: 50px auto;
+	text-align: center;
+	color: #fefefd;
+	font-family: 'Gravitas One', cursive;
+}
+
+a.new-search-button {
+	float: right;
+	margin: 0 150px 50px 0;
+	background-color: #3276b1;
+}
+
+a.new-search-button:hover {
+	background-color: #b2e1e5;
+}
+
+.contain-poster {
+	position: relative;
+	height: 100px;
+}
+
+.center {
+	margin: 0 auto;
+	display: block;
+	width: 300px;
+}
+
+.row {
+	border: solid 1px #fefefd;
+	padding: 5px;
+	background-color: rgba(0,0,0,0.25)
+}
+
+.movie-title {
+	margin-top: 0;
+}
+
+.search-form {
+	text-align: center;
+	margin: 200px auto;
+}
+
+.background {
+	background-image: url(http://noirbabes.com/precode/wp-content/uploads/2012/08/peg1-stars-hollywood-sign.jpg);
+	background-size: 100%;
+	background-attachment: fixed;
+}
+
+.gravitas {
+	font-family: 'Gravitas One', cursive;
+	color: #fefefd;
+	font-size: 50px;
+}
+.btn-color {
+	background-color: white;
+	color: black;
+}
+
+.btn-color:hover{
+	background-color: #b2e1e5;  /*#2a727d;*/
+	color: white;
+}
+
+.plot {
+	color: #fefefd;
+}
+
+.movie-title:hover {
+	text-decoration: none;
+	color: #b2e1e5;
+}
+
+.movie-title {
+	color: #ffffff;
+}
+
+.movie-contents {
+	color: #fefefd;
+}
+
+.actors > li {
+	display: inline-block;
+	margin: 0 5px;
+	position: relative;
+	left: -45px;
+}
+
+.hide {
+	height: 0;
+}
+
+h3.movie-info:hover {
+	color: #b2e1e5;
+	cursor: pointer;
+}
+
+h1.error {
+	margin-top: 200px;
+}

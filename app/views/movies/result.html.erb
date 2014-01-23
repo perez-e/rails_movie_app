@@ -1,0 +1,20 @@
+<%= render  partial: "navbar" %>
+
+<h1 class="heading ">Movie Results for: <%= @search_str %></h1>
+<div class="container">
+	<% @movies.each do |movie| %>
+	<div class="row">
+		<div class="col-xs-3 contain-poster">
+			<div class="poster_div"><img src="<%= movie['Poster']=='N/A' ? 'http://static2.wikia.nocookie.net/__cb20090329133961/superfriends/images/a/a5/No_Photo_Available.jpg' : movie['Poster'] %>" class="poster"/>
+			</div>
+		</div>
+		<div class="col-xs-7">
+			<h3 class="movie-title"><%= link_to "#{movie['Title']} (#{movie['Year']})", "/movie/#{movie['imdbID']}", class: 'movie-title', method: :post  %></h3>
+			<p class="plot"><%= movie["Plot"] %></p>
+		</div>
+	</div>
+	<br />
+	<% end %>
+</div>
+
+<a href="/" class="btn btn-primary new-search-button">New Search</a>
