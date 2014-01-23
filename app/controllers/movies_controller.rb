@@ -88,16 +88,9 @@ class MoviesController < ApplicationController
     redirect_to "/history"
   end
 
-  #route: # POST   /movies(.:format)
-  def create
-    # create new movie object from params
-    movie = params.require(:movie).permit(:title, :year)
-    movie["imdbID"] = rand(10000..100000000).to_s
-    # add object to movie db
-    @@movie_db << movie
-    # show movie page
-    # render :index
-    redirect_to action: :index
+  def search
+    @search_str = Search.all
+
   end
 
 end

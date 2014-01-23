@@ -1,0 +1,7 @@
+<%= render  partial: "navbar" %>
+
+<h1 class="heading">Search History</h1>
+
+<% @search_str.each do |search| %>
+	<h3 class="heading"><%= search.query %></h3>
+<% end %>

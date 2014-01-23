@@ -10,7 +10,8 @@ Movies::Application.routes.draw do
   delete "/movie/:imdbID", to: "movies#destroy"
 
   get "/history", to: "movies#history"
- 
+
+  get "/search", to: "movies#search" 
 
 
 
