@@ -11,12 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140123005425) do
+ActiveRecord::Schema.define(version: 20140123172557) do
 
   create_table "movies", force: true do |t|
     t.string   "imdbID"
     t.string   "title"
     t.string   "year"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "searches", force: true do |t|
+    t.string   "query"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

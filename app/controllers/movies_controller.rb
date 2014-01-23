@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
   end
 
   def result
+    Search.create(query: params[:movie])
    
     redirect_to "/result/#{params[:movie]}"
   end
